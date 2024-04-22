@@ -1,0 +1,22 @@
+.form-field {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .main-div{
+    display: flex;
+    justify-content: center;
+  }
+
+  .bshadow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(5px 5px 5px #222222);
+    opacity: .5;
+  }

@@ -1,0 +1,58 @@
+<mat-toolbar>
+  <span>QR Code Generator</span>
+</mat-toolbar>
+
+<br /><br /><br /><br />
+
+<div class="main-div">
+  <mat-card style="width: 440px">
+    <mat-form-field class="form-field">
+      <mat-label>Web Url</mat-label>
+      <input
+        matInput
+        placeholder="https://..."
+        value="https://"
+        [(ngModel)]="urlValue"
+      />
+    </mat-form-field>
+    <button
+      mat-flat-button
+      color="primary"
+      style="margin-left: 20px"
+      (click)="GenerateQr()"
+    >
+      Generate 🚀
+    </button>
+  </mat-card>
+</div>
+
+<br /><br /><br />
+
+<div class="main-div">
+  <ngx-qrcode
+    qrc-element-type="canvas"
+    [elementType]="elementType"
+    [errorCorrectionLevel]="correctionLevel"
+    [value]="qrValue"
+    cssClass="bshadow"
+  ></ngx-qrcode>
+</div>
+
+<div *ngIf="isQrGenerated">
+  <br /><br />
+
+  <div class="main-div">
+    <button mat-flat-button color="primary" (click)="copyQrCodeImage()">
+      Copy<fa-icon
+        [icon]="faCopy"
+        style="color: #00a6ed; margin-left: 8px"
+      ></fa-icon>
+    </button>
+
+    <div style="width: 20px"></div>
+
+    <a download="qr_code.png" href="{{ imageBase64 }}"
+      ><button mat-flat-button color="primary">Download ⬇️</button>
+    </a>
+  </div>
+</div>
