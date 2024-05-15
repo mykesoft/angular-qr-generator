@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
-![Screenshot](https://raw.githubusercontent.com/mykesoft/ng-qr-generator/main/Screenshot.png?raw=true "Title")
+![Screenshot](https://raw.githubusercontent.com/mykesoft/angular-qr-generator/main/Screenshot.png?raw=true "Title")
 
 ## Development server
 
